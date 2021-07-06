@@ -31,7 +31,7 @@ jobs:
           sudo -E ./create-rootfs.sh
           pip install --user ansible
           cd ansible
-          sudo -E $(which ansible-playbook) ansible/jetson.yaml
+          sudo -E $(which ansible-playbook) jetson.yaml
           cd ..
           sudo -E ./create-image.sh
         env: 
