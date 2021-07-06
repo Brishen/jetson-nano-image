@@ -37,3 +37,9 @@ jobs:
           JETSON_NANO_BOARD: jetson-nano
           JETSON_NANO_REVISION: 200
           JETSON_BUILD_DIR: ./build
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: image
+          path: |
+            build/*.img
