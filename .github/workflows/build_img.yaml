@@ -35,10 +35,10 @@ jobs:
           cd ..
           sudo -E ./create-image.sh
         env: 
-          JETSON_ROOTFS_DIR: ${{GITHUB_WORKSPACE}}/rootfs
+          JETSON_ROOTFS_DIR: $GITHUB_WORKSPACE/rootfs
           JETSON_NANO_BOARD: jetson-nano
           JETSON_NANO_REVISION: 200
-          JETSON_BUILD_DIR: ${{GITHUB_WORKSPACE}}/build
+          JETSON_BUILD_DIR: $GITHUB_WORKSPACE/build
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
