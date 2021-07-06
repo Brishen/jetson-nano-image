@@ -44,4 +44,5 @@ jobs:
         with:
           name: image
           path: |
-            build/*.img
+            $GITHUB_WORKSPACE/build/Linux_for_Tegra/tools/jetson.img
+
