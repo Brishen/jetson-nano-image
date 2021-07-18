@@ -99,6 +99,8 @@
     - vim
     - wpasupplicant
     - kde-plasma-desktop
+  environment:
+    DEBIAN_FRONTEND: noninteractive
 
 - name: Generate locales
   locale_gen:
