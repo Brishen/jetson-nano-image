@@ -98,6 +98,14 @@
     - usbutils
     - vim
     - wpasupplicant
+    
+- name: install desktop environment KDE
+  apt:  name={{ item }} state=present install_recommends=yes
+  with_items:
+    - kde-standard
+    - kde-plasma-desktop
+  environment:
+    DEBIAN_FRONTEND: noninteractive
 
 - name: Generate locales
   locale_gen:
